@@ -1,0 +1,66 @@
+# =========================== Basic Settings ===========================
+# Machine info
+num_gpus_per_job: 2 # number of gpus each job need
+num_cpus_per_job: 24 # number of gpus each job need
+num_hosts_per_job: 1
+memory_per_job: 32 # number of gpus each job need
+gpu_type: "nvidia-rtx-2080-ti"
+
+# Parameters
+name: hmdRemoval # any name
+model_restore: "" # logs/hmdRemoval
+dataset: "rgbd_faces"
+random_crop: False
+val: True # true if you want to view validation results in tensorboard
+log_dir: logs/hmdRemoval
+
+gan: "sngan"
+gan_loss_alpha: 1.
+gan_with_mask: True
+discounted_mask: True
+random_seed: False
+padding: "SAME"
+
+# Training
+train_spe: 4000
+max_iters: 100000000
+viz_max_out: 10
+val_psteps: 2000
+custom_mask: True
+
+# Data
+data_flist:
+  rgbd_faces:
+    [
+      "data/rgbd_faces/data_flist/train_face.flist",
+      "data/rgbd_faces/data_flist/val_face.flist",
+      "data/rgbd_faces/data_flist/train_mask.flist",
+      "data/rgbd_faces/data_flist/val_mask.flist",
+      "data/rgbd_faces/data_flist/train_ref.flist",
+      "data/rgbd_faces/data_flist/val_ref.flist",
+    ]
+
+static_view_size: 6
+img_shapes: [224, 224, 4]
+height: 128
+width: 128
+max_delta_height: 32
+max_delta_width: 32
+batch_size: 10
+vertical_margin: 0
+horizontal_margin: 0
+
+# Losses
+ae_loss: True
+l1_loss: True
+l1_loss_alpha: 3.
+identity_loss: True
+identity_loss_alpha: 1.
+surface_loss: True
+surface_loss_alpha: 1.
+surface_attention: True
+surface_discriminator: False
+
+# Guides
+guided: False # Not implemented
+edge_threshold: 0.6

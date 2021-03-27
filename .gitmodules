@@ -1,0 +1,3 @@
+[submodule "neuralgym"]
+	path = neuralgym
+	url = https://github.com/nsalminen/neuralgym
