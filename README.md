@@ -37,4 +37,13 @@ The software is for educational and academic research purpose only.
 
 ## Citing
 
-Will follow later.
+```bibtex
+@inproceedings{numan2021generative,
+  title={Generative RGB-D Face Completion for Head-Mounted Display Removal},
+  author={Numan, Nels and ter Haar, Frank and Cesar, Pablo},
+  booktitle={2021 IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops (VRW)},
+  pages={109--116},
+  year={2021},
+  organization={IEEE}
+}
+````
