@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use or want to refer to this work, please cite it as below."
+authors:
+- family-names: "Numan"
+  given-names: "Nels"
+  orcid: "https://orcid.org/0000-0003-2931-7653"
+title: "Generative RGB-D Face Completion for Head-Mounted Display Removal"
+version: 1.0.0
+doi: 10.1109/VRW52623.2021.00028
+date-released: 2021-03-27
+url: "https://github.com/nsalminen/HMDRemoval"
+preferred-citation:
+  type: conference-paper
+  authors:
+  - family-names: "Numan"
+    given-names: "Nels"
+    orcid: "https://orcid.org/0000-0003-2931-7653"
+  - family-names: "ter Haar"
+    given-names: "Frank"
+    orcid: "https://orcid.org/0000-0001-5532-0309"
+  - family-names: "Cesar"
+    given-names: "Pablo"
+    orcid: "https://orcid.org/0000-0003-1752-6837"
+  doi: "10.1109/VRW52623.2021.00028"
+  conference: "2021 IEEE Conference on Virtual Reality and 3D User Interfaces (VR)"
+  month: 3
+  title: "Generative RGB-D Face Completion for Head-Mounted Display Removal"
+  year: 2021
