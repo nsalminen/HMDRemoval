@@ -34,18 +34,10 @@ def multigpu_graph_def(model, FLAGS, image_ref_mask_data, identity_model, gpu_id
 if __name__ == "__main__":
     FLAGS = ng.Config("inpaint.yml")
 
-    slurm_id = os.environ.get("SLURM_JOB_ID", None)
-    if slurm_id:
-        FLAGS.log_dir += "_" + str(slurm_id)
-
     img_shapes = FLAGS.img_shapes
     masks = None
     references = None
-    identity_model = None
-    vggface_weights = None
     tf_checkpoint_path = None
-
-    tf.set_random_seed(int(slurm_id))
 
     if FLAGS.guided:
         raise NotImplementedError("{} not implemented.".format("guides"))
