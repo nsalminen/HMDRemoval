@@ -259,7 +259,7 @@ if __name__ == "__main__":
     output = surface_conv(input_image_ph)
 
     detector = MTCNN()
-    facenet_model = load_model("../facenet_keras.h5")
+    facenet_model = load_model("facenet_keras.h5")
 
     pred_folder = os.path.normpath(args.pred_folder)
     filelist_pred = glob.glob(pred_folder + "/*.png")

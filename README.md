@@ -22,7 +22,13 @@ _Qualitative results summary. Shown for color (RGB), depth (D), and estimated su
    - Run `python train.py`.
 3. Testing:
    - Run `python test.py --image data/input.png --mask data/mask.png --reference data/reference.png --output examples/output.png --checkpoint logs/hmdRemoval_341953`.
-4. Still have questions?
+4. Batch testing:
+   - Download [`facenet_keras.h5`](https://drive.google.com/file/d/1qVRj4-joxtb4FxFk76AE0H2QA2II9lqQ/view?usp=sharing) and place in repo directory.
+   - Run `python batch_test.py --summary 1 --flist data/rgbd_faces/data_flist/test_face_mask_ref.flist --image_height 224 --image_width 224 --output_dir output --checkpoint_dir /logs/hmdRemoval_341953`
+5. Evaluation:
+   - Run batch test (see point 4).
+   - Run `python evaluate.py --pred_folder output --flist data/rgbd_faces/data_flist/test_face_mask.flist`
+6. Still have questions?
    - If you still have questions (e.g.: How to use multi-gpus? How to do batch testing?), please first search over [closed issues in the repo of the base framework](https://github.com/JiahuiYu/generative_inpainting/issues?q=is%3Aissue+is%3Aclosed). If the problem is not solved, please feel free to open an issue.
 
 ## TensorBoard
