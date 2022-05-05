@@ -10,9 +10,9 @@ _Qualitative results summary. Shown for color (RGB), depth (D), and estimated su
 ## Run
 
 0. Requirements:
-   - Install `python3`.
-   - Install [`tensorflow`](https://www.tensorflow.org/install/) (tested on Release 1.3.0, 1.4.0, 1.5.0, 1.6.0, 1.7.0).
-   - Install `keras` and `keras_vggface`
+   - Install Python (v3.6).
+   - Install the requirements listed in `requirements.txt`.
+      - Run `pip install -r requirements.txt` to install with pip.
 1. Training:
    - Prepare training images file list with [create_flist.py](/create_flist.py) (needs modification based on file name structure).
    - Modify [inpaint.yml](/inpaint.yml) to set `DATA_FLIST`, `LOG_DIR`, `IMG_SHAPES` and other parameters.
